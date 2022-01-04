@@ -11,37 +11,99 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :lawsuit_number, style: "display: block" %>
-    <%= form.text_field :lawsuit_number %>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Processo</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+          <%= form.text_field :lawsuit_number, class:"input", placeholder:"Número do Processo"%>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :collection, style: "display: block" %>
-    <%= form.text_field :collection %>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Acervo</label>
+    </div>
+    <div class="field-body">
+      <div class="field is-narrow">
+        <div class="control">
+          <div class="select is-fullwidth">
+              <%= form.select(:collection, options_for_select(['A', 'B'])) %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :deadline_days, style: "display: block" %>
-    <%= form.number_field :deadline_days %>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Prazo</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= form.number_field :deadline_days, class:"input", placeholder:"Prazo em dias" %>
+        </div>
+<!--        <p class="help is-danger">-->
+<!--          This field is required-->
+<!--        </p>-->
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :aware_date, style: "display: block" %>
-    <%= form.date_field :aware_date %>
+  <div class="field is-horizontal">
+    <div class="field-label is-normal">
+      <label class="label">Data da Ciência</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= form.date_field :aware_date, class:"input", placeholder:"Data da Ciência" %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :deadline_date, style: "display: block" %>
-    <%= form.date_field :deadline_date %>
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <label class="label">Prazo final</label>
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <%= form.date_field :deadline_date, class:"input", placeholder:"Prazo Final" %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :done, style: "display: block" %>
-    <%= form.check_box :done %>
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <label class="label">Feito?</label>
+    </div>
+    <div class="field-body">
+      <div class="field is-narrow">
+        <div class="control">
+          <%= form.check_box :done %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="field is-horizontal">
+    <div class="field-label">
+      <!-- Left empty for spacing -->
+    </div>
+    <div class="field-body">
+      <div class="field">
+        <div class="control">
+          <button class="button is-primary">
+            Salvar
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

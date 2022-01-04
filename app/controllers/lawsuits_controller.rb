@@ -58,13 +58,13 @@ class LawsuitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lawsuit
-      @lawsuit = Lawsuit.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lawsuit
+    @lawsuit = Lawsuit.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def lawsuit_params
-      params.require(:lawsuit).permit(:lawsuit_number, :collection, :deadline_days, :aware_date, :deadline_date, :done)
-    end
+  # Only allow a list of trusted parameters through.
+  def lawsuit_params
+    params.require(:lawsuit).permit(:lawsuit_number, :collection, :deadline_days, :aware_date, :deadline_date, :done)
+  end
 end

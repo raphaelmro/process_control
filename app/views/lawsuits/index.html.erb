@@ -19,10 +19,18 @@
         <td><%= lawsuit.deadline_days %></td>
         <td><%= lawsuit.aware_date %></td>
         <td><%= lawsuit.deadline_date %></td>
-        <td><%= lawsuit.done %></td>
+        <td>
+          <% if lawsuit.done %>
+            <span class="icon">
+              <i class="fas fa-info-circle"></i>
+            </span>
+          <% else %>
+          <% end %>
+        </td>
       </tr>
       </tbody>
     <% end %>
     </table>
-<%= link_to "Adicionar Processo", new_lawsuit_path %>
+
+<%= link_to "Adicionar Processo", new_lawsuit_path, class: 'button is-info' %>
 </section>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lawsuit_number: MyString
+  collection: MyString
+  deadline_days: 1
+  aware_date: 2022-01-04
+  deadline_date: 2022-01-04
+  done: false
+
+two:
+  lawsuit_number: MyString
+  collection: MyString
+  deadline_days: 1
+  aware_date: 2022-01-04
+  deadline_date: 2022-01-04
+  done: false

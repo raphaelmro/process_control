@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lawsuits</h1>
+
+<div id="lawsuits">
+  <% @lawsuits.each do |lawsuit| %>
+    <%= render lawsuit %>
+    <p>
+      <%= link_to "Show this lawsuit", lawsuit %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New lawsuit", new_lawsuit_path %>

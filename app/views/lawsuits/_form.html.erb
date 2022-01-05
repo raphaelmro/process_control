@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  <section class="hero has-background-light is-small">
+    <div class="hero-body is-small">
+      <p class="title has-text-info">
+        <%= controller.action_name == 'new' ? 'Cadastra Processo': 'Atualiza Processo'  %>
+      </p>
+    </div>
+  </section>
+  <br/>
+
   <div class="field is-horizontal">
     <div class="field-label is-normal">
       <label class="label">Processo</label>

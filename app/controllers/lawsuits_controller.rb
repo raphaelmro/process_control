@@ -25,7 +25,7 @@ class LawsuitsController < ApplicationController
 
     respond_to do |format|
       if @lawsuit.save
-        format.html { redirect_to lawsuit_url(@lawsuit), notice: "Lawsuit was successfully created." }
+        format.html { redirect_to lawsuit_url(@lawsuit), notice: "O processo foi criado com sucesso." }
         format.json { render :show, status: :created, location: @lawsuit }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class LawsuitsController < ApplicationController
   def update
     respond_to do |format|
       if @lawsuit.update(lawsuit_params)
-        format.html { redirect_to lawsuit_url(@lawsuit), notice: "Lawsuit was successfully updated." }
+        format.html { redirect_to lawsuit_url(@lawsuit), notice: "O processo foi atualizado com sucesso." }
         format.json { render :show, status: :ok, location: @lawsuit }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class LawsuitsController < ApplicationController
     @lawsuit.destroy
 
     respond_to do |format|
-      format.html { redirect_to lawsuits_url, notice: "Lawsuit was successfully destroyed." }
+      format.html { redirect_to lawsuits_url, notice: "O processo foi removido com sucesso." }
       format.json { head :no_content }
     end
   end

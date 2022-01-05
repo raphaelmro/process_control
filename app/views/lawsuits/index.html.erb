@@ -17,14 +17,17 @@
         <td><%= link_to lawsuit.lawsuit_number, lawsuit %></td>
         <td><%= lawsuit.collection %></td>
         <td><%= lawsuit.deadline_days %></td>
-        <td><%= lawsuit.aware_date %></td>
-        <td><%= lawsuit.deadline_date %></td>
+        <td><%= lawsuit.aware_date.strftime("%d/%m/%Y") %></td>
+        <td><%= lawsuit.deadline_date.strftime("%d/%m/%Y") %></td>
         <td>
           <% if lawsuit.done %>
-            <span class="icon">
-              <i class="fas fa-info-circle"></i>
+            <span class="icon has-text-info">
+              <i class="fas fa-check"></i>
             </span>
           <% else %>
+            <span class="icon has-text-danger">
+              <i class="fas fa-times"></i>
+            </span>
           <% end %>
         </td>
       </tr>

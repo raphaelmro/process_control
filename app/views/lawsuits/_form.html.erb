@@ -14,103 +14,107 @@
   <section class="hero has-background-light is-small">
     <div class="hero-body is-small">
       <p class="title has-text-info">
-        <%= controller.action_name == 'new' ? 'Cadastra Processo': 'Atualiza Processo'  %>
+        <%= controller.action_name == 'new' ? 'Cadastra Processo' : 'Atualiza Processo' %>
       </p>
     </div>
   </section>
   <br/>
 
-  <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Processo</label>
-    </div>
-    <div class="field-body">
-      <div class="field">
-          <%= form.text_field :lawsuit_number, class:"input", placeholder:"Número do Processo"%>
-      </div>
-    </div>
-  </div>
-
-  <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Acervo</label>
-    </div>
-    <div class="field-body">
-      <div class="field is-narrow">
-        <div class="control">
-          <div class="select is-fullwidth">
-              <%= form.select(:collection, options_for_select(['A', 'B'])) %>
+  <div class="card">
+    <div class="card-content">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Processo</label>
+        </div>
+        <div class="field-body">
+          <div class="field ">
+            <%= form.text_field :lawsuit_number, class: "input", placeholder: "Número do Processo" %>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Prazo</label>
-    </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <%= form.number_field :deadline_days, class:"input", placeholder:"Prazo em dias" %>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Acervo</label>
         </div>
-<!--        <p class="help is-danger">-->
-<!--          This field is required-->
-<!--        </p>-->
-      </div>
-    </div>
-  </div>
-
-  <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">Data da Ciência</label>
-    </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <%= form.date_field :aware_date, class:"input", placeholder:"Data da Ciência" %>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth">
+                <%= form.select(:collection, options_for_select(['A', 'B'])) %>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="field is-horizontal">
-    <div class="field-label">
-      <label class="label">Prazo final</label>
-    </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <%= form.date_field :deadline_date, class:"input", placeholder:"Prazo Final" %>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Prazo</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <%= form.number_field :deadline_days, class: "input", placeholder: "Prazo em dias" %>
+            </div>
+            <!--        <p class="help is-danger">-->
+            <!--          This field is required-->
+            <!--        </p>-->
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="field is-horizontal">
-    <div class="field-label">
-      <label class="label">Feito?</label>
-    </div>
-    <div class="field-body">
-      <div class="field is-narrow">
-        <div class="control">
-          <%= form.check_box :done %>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Data da Ciência</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <%= form.date_field :aware_date, class: "input", placeholder: "Data da Ciência" %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="field is-horizontal">
-    <div class="field-label">
-      <!-- Left empty for spacing -->
-    </div>
-    <div class="field-body">
-      <div class="field">
-        <div class="control">
-          <button class="button is-info is-light">
-            Salvar
-          </button>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Prazo final</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <%= form.date_field :deadline_date, class: "input", placeholder: "Prazo Final" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal has-text-left">
+          <label class="label">Feito?</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <%= form.check_box :done %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-info is-light">
+                Salvar
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
